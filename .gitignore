@@ -1,0 +1,9 @@
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+#intelliJ
+.idea
+node_modules
+# Cypress Artifacts
+cypress/screenshots/
+cypress/videos/
