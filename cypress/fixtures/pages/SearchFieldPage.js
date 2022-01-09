@@ -10,6 +10,12 @@ export class SearchFieldPage {
     }
 
     navigateToSearchCategory(category){
+        cy.get('.search-category-selector').contains(category).then (item1 => {
+            item1.click();
+        });
+    }
+
+    navigateToAdvancedSearchCategory(category){
         cy.get('.search-category-selector').click();
         cy.contains(category).click();
     }

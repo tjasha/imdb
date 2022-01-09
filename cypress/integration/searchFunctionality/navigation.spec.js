@@ -39,7 +39,7 @@ describe('Categories navigations', () => {
     });
 
     it('Navigate to Advanced Search search', () => {
-        searchFieldPage.navigateToSearchCategory(advanced);
+        searchFieldPage.navigateToAdvancedSearchCategory(advanced);
         resultsPage.urlIsCorrect(advancedUrl);
     });
 
