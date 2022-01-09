@@ -1,34 +1,4 @@
 export class ResultsPage {
- /*   visit() {
-        cy.visit('/');
-    }
-*/
-/*
-
-    typeTextIntoSearchField(text){
-        cy.get('#suggestion-search')
-            .type(text);
-    }
-
-    getSearchButton() {
-        return cy.get('suggestion-search-button');
-    }
-
-    checkSearchSuggestionsThatContain(query, noOfSuggestions){
-        cy.get('[data-testid="search-result--const"]')
-            .should('be.visible')
-            .and('have.length', noOfSuggestions)
-            .each(($el, index, $lis) => {
-                cy.wrap($el).should('contain.text', query);
-            });
-    }
-
-    checkNoResultsErrorMessage(){
-        cy.get('.ipc-error-message')
-            .invoke('text')
-            .should('equal', 'No results found.')
-    }
-*/
 
     searchedResult(query){
         cy.get('.findHeader')
@@ -56,30 +26,31 @@ export class ResultsPage {
             .should('contain', actorName);
     }
 
+    firstResultIsMatching(company){
+        cy.get('.result_text')
+            .eq(0)
+            .should('contain', company);
+    }
 
-/*    bothTitlesAreShown(originalTitle){///??????
-        if (cy.find('[data-testid="hero-title-block__original-title"]').length>0){
-          *//*  cy.find('[data-testid="hero-title-block__original-title"]'
+    checkCompanyResult(query){
+        cy.get('.findHeader')
             .invoke('text')
-            .should('contain', originalTitle);*//*
-            cy.log('true');
-        }else{
-        cy.log("meh");
-        }
-    }*/
-
-/*
-    choseXthSuggestion(x){
-        cy.get('[data-testid="search-result--const"]')
-            .eq(x).click();
+            .should('contain', 'results for')
+            .get('.findSearchTerm')
+                .invoke('text')
+                .should('equal', '"' + query + '"');
     }
 
-    seeAllResultsOptionIsShown(query){
-        cy.get('[data-testid="search-result--link"]')
-            .should('contain', query);
+// advanced search
+
+    selectTopic(topic, value, order){
+        cy.get('.ipl-select__input').eq(order).select(topic);
+        cy.get('.ipl-input__input').eq(order).type(value + '{enter}');
     }
-*/
 
-
+    advancedResultsAreShownFor(value){
+        cy.get('.header')
+            .should('contain', value);
+    }
 
 }

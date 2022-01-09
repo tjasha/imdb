@@ -11,11 +11,16 @@ const englishTitle = 'Big bang theory';
 
 describe('Searches for a celebrities', () => {
 
-    it('All suggestions include word ' + actorName + ' and actor/actress in the title', () => {
+    it('Search title ' + )
+
+
+    it('All suggestions include word ' + actorName + ' and actress in the title', () => {
         searchFieldPage.typeTextIntoSearchField(actorName);
         suggestionsPage.checkThatSearchSuggestionsContainsQueryAndActorActress(actorName, 8);
         suggestionsPage.choseXthSuggestion(0);
         resultsPage.actorIsShown(actorName);
     });
+
+
 
 });

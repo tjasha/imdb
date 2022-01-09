@@ -1,33 +1,32 @@
-describe('Navigate to different searches', () => {
+export class Navigation {
 
-    it('navigate to Titles search', () => {
+    navigateToTitlesSearch() {
         cy.get('.search-category-selector').click();
         cy.contains('Titles').click();
-    });
+    }
 
-    it('navigate to TV Eposodes search', () => {
+    navigateToTVEpisodesSearch() {
         cy.get('.search-category-selector').click();
         cy.contains('TV Episodes').click();
-    });
+    }
 
-    it('navigate to Celebs search', () => {
+    navigateToCelebsSearch() {
         cy.get('.search-category-selector').click();
-        //cy.get('#iconContext-people').click();
         cy.contains('Celebs').click();
-    });
+    }
 
-    it('navigate to Companies search', () => {
+    navigateToCompaniesSearch() {
         cy.get('.search-category-selector').click();
         cy.contains('Companies').click();
-    });
+    }
 
-    it('navigate to Keywords search', () => {
+    navigateToKeywordsSearch() {
         cy.get('.search-category-selector').click();
         cy.contains('Keywords').click();
-    });
+    }
 
-    it('navigate to Advanced search', () => {
+    navigateToAdvancedSearch() {
         cy.get('.search-category-selector').click();
         cy.contains('Advanced Search').click();
-    });
-});
+    }
+}
