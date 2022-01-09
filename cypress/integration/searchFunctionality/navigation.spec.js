@@ -1,5 +1,5 @@
-import { SearchFieldPage } from '/cypress/integration/pages/SearchFieldPage';
-import { ResultsPage } from '/cypress/integration/pages/ResultsPage';
+import { SearchFieldPage } from '/cypress/fixtures/pages/SearchFieldPage';
+import { ResultsPage } from '/cypress/fixtures/pages/ResultsPage';
 const searchFieldPage = new SearchFieldPage();
 const resultsPage = new ResultsPage();
 const titles = 'Titles';

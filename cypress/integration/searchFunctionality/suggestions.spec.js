@@ -1,5 +1,5 @@
-import { SearchFieldPage } from '/cypress/integration/pages/SearchFieldPage';
-import { SuggestionsPage } from '/cypress/integration/pages/SuggestionsPage';
+import { SearchFieldPage } from '/cypress/fixtures/pages/SearchFieldPage';
+import { SuggestionsPage } from '/cypress/fixtures/pages/SuggestionsPage';
 const searchFieldPage = new SearchFieldPage();
 const suggestionsPage = new SuggestionsPage();
 const keyWord = 'Matrix';

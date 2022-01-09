@@ -1,4 +1,4 @@
-import { ResultsPage } from '/cypress/integration/pages/ResultsPage';
+import { ResultsPage } from '/cypress/fixtures/pages/ResultsPage';
 const resultsPage = new ResultsPage();
 const date = '01-01'
 const filter = 'oscar_nominees'

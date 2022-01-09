@@ -1,6 +1,6 @@
-import { ResultsPage } from '/cypress/integration/pages/ResultsPage';
-import { SearchFieldPage } from '/cypress/integration/pages/SearchFieldPage';
-import { SuggestionsPage } from '/cypress/integration/pages/SuggestionsPage';
+import { ResultsPage } from '/cypress/fixtures/pages/ResultsPage';
+import { SearchFieldPage } from '/cypress/fixtures/pages/SearchFieldPage';
+import { SuggestionsPage } from '/cypress/fixtures/pages/SuggestionsPage';
 const searchFieldPage = new SearchFieldPage();
 const suggestionsPage = new SuggestionsPage();
 const resultsPage = new ResultsPage();
