@@ -1,5 +1,9 @@
 export class ResultsPage {
 
+    urlIsCorrect(url){
+        cy.url().should('include', url);
+    }
+
     searchedResult(query){
         cy.get('.findHeader')
             .invoke('text')
@@ -51,6 +55,29 @@ export class ResultsPage {
     advancedResultsAreShownFor(value){
         cy.get('.header')
             .should('contain', value);
+    }
+
+    navigateToAdvancedNameSearch() {
+       cy.get('div:nth-child(2) > div:nth-child(2) > a')
+         .should('have.attr', 'href').and('include', '/search/name')
+         .then((href) => {
+           cy.visit(href)
+         })
+    }
+
+    insertBirthday(date){
+        cy.get('[name="birth_monthday"]')
+            .type(date);
+    }
+
+    checkCategory(category){
+        cy.get('[type="checkbox"]')
+            .check(category);
+    }
+
+    submitSearch(){
+        cy.get('.primary')
+            .click();
     }
 
 }
