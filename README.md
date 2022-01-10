@@ -14,7 +14,7 @@
 - SearchFieldPage.js
 - SuggestionsPage.js
 
-Project is structured in the wy that code can be reusable and clear to the tester what each test is testing. 
+Project is structured in the way that code can be reused and clear to the tester what each test is testing. 
 
 ## How to run a project:
 1. in command line navigate to a folder that you want to save a project in 
@@ -27,4 +27,4 @@ Project is structured in the wy that code can be reusable and clear to the teste
 1. clone the project as before or in IDE
 2. run "npx cypress open"
 3. in cypress window create a project and exchange "projectId" value with your created project id in cypress.json
-4. instead of only run command, you can run "npx cypress run --record --key <key_value>" - key value is created when project is created
+4. instead of only run command, you can run "npx cypress run --record --key <key_value>" (key value is created when project is created), to see test dashboard with all run tests and analytics 
